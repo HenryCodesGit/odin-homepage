@@ -187,7 +187,7 @@ nav, .links{
                 display: flex;
                 align-items: center;
                 img{
-                    height: calc(0.75*var(--default-normal-font-size));
+                    height: calc(1.25*var(--default-normal-font-size));
                 }
             }
         }
@@ -205,6 +205,7 @@ nav, .links{
         box-shadow: calc(0.5*var(--default-padding-small)) calc(0.5*var(--default-padding-small)) calc(0.5*var(--default-padding-small)) #00000077;
         display: grid;
         grid-template: 1fr auto auto / 1fr auto;
+        align-items: center;
         padding: 0 0 var(--default-padding-large) 0;
 
         > img{
@@ -229,7 +230,7 @@ nav, .links{
         .links{
             margin: var(--default-padding-small) var(--default-padding-small) 0 var(--default-padding-small);
             grid-area: 2 / 2 / 2 / 2;
-            font-size: var(--default-header2-font-size);
+            font-size: calc(0.5*var(--default-header2-font-size));
         }
 
         p {
