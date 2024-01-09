@@ -113,6 +113,10 @@ table { border-collapse: collapse; border-spacing: 0;}
     font-family: 'Roboto', sans-serif;
 }
 
+p {
+    color: #333;
+}
+
 h1, h2 {
     font-family: 'PlayfairDisplay', serif;
 }
@@ -140,9 +144,10 @@ h1 {
 }
 
 figure {
-    background-image: linear-gradient(-20deg, #333 49.75%, rgb(156, 16, 16) 50%, rgb(156, 16, 16) 50.5%, white 50.75%);
+    background-image: linear-gradient(-20deg, #333 49.75%, rgb(156, 16, 16) 50%, rgb(156, 16, 16) 50.5%, rgb(201, 40, 40));
     text-align: center;
     img {
+        border-radius: 40% 0 40% 0;
         width: 100%;
         padding: var(--default-padding) var(--default-padding) 0 var(--default-padding);
     }
@@ -150,10 +155,13 @@ figure {
     figcaption{
         position: absolute;
         transform: translateY(calc(-100% - 0.75*var(--default-padding)));
-        width: calc(100% - 2*var(--default-padding));
+        width: calc(70% - 2*var(--default-padding));
         margin-left: var(--default-padding);
+        padding: var(--default-padding-small);
     
-        font-size: var(--default-large-font-size);
+        font-size: calc(1.25*var(--default-large-font-size));
+        font-weight: lighter;
+        text-align: left;
         color: #dadada;
         text-shadow: 0.05em 0.05em 0.1em black;
         background-color: #2225;
@@ -225,9 +233,11 @@ nav, .links{
         }
 
         p {
+
             margin: var(--default-padding-small);
             grid-area: 3 / 1 / 3 / -1;
             font-size: var(--default-card-font-size);
+            font-weight: 300;
         }
 
         .links ul li {
