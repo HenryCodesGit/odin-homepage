@@ -8,96 +8,99 @@ table { border-collapse: collapse; border-spacing: 0;}
 
 /* ************ */
 
-@font-face {
-    font-family: 'PlayfairDisplay';
-    font-style: normal;
-    font-weight: 100 1000;
-    font-stretch: 0% 200%;
-    src: url('./fonts/PlayfairDisplay-VariableFont_wght.ttf');
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('./fonts/Roboto-Black.ttf');
-    font-weight:800;
-    font-style:normal;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('./fonts/Roboto-BlackItalic.ttf');
-    font-weight:800;
-    font-style:italic;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('./fonts/Roboto-Bold.ttf');
-    font-weight:bold;
-    font-style:normal;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('./fonts/Roboto-BoldItalic.ttf');
-    font-weight:bold;
-    font-style:italic;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('./fonts/Roboto-Italic.ttf');
-    font-weight:normal;
-    font-style:italic;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('./fonts/Roboto-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;    
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('./fonts/Roboto-Light.ttf');
-    font-weight:300;
-    font-style: normal;    
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('./fonts/Roboto-LightItalic.ttf');
-    font-weight:300;
-    font-style: italic;    
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('./fonts/Roboto-Medium.ttf');
-    font-weight:500;
-    font-style: normal;    
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('./fonts/Roboto-MediumItalic.ttf');
-    font-weight:500;
-    font-style: italic;    
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('./fonts/Roboto-Thin.ttf');
-    font-weight:100;
-    font-style: normal;    
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('./fonts/Roboto-ThinItalic.ttf');
-    font-weight:100;
-    font-style: italic;    
+/* Putting fonts into a media query so I can collapse it in the CSS to hide */
+@media all {
+    @font-face {
+        font-family: 'PlayfairDisplay';
+        font-style: normal;
+        font-weight: 100 1000;
+        font-stretch: 0% 200%;
+        src: url('./fonts/PlayfairDisplay-VariableFont_wght.ttf');
+    }
+    
+    @font-face {
+        font-family: 'Roboto';
+        src: url('./fonts/Roboto-Black.ttf');
+        font-weight:800;
+        font-style:normal;
+    }
+    
+    @font-face {
+        font-family: 'Roboto';
+        src: url('./fonts/Roboto-BlackItalic.ttf');
+        font-weight:800;
+        font-style:italic;
+    }
+    
+    @font-face {
+        font-family: 'Roboto';
+        src: url('./fonts/Roboto-Bold.ttf');
+        font-weight:bold;
+        font-style:normal;
+    }
+    
+    @font-face {
+        font-family: 'Roboto';
+        src: url('./fonts/Roboto-BoldItalic.ttf');
+        font-weight:bold;
+        font-style:italic;
+    }
+    
+    @font-face {
+        font-family: 'Roboto';
+        src: url('./fonts/Roboto-Italic.ttf');
+        font-weight:normal;
+        font-style:italic;
+    }
+    
+    @font-face {
+        font-family: 'Roboto';
+        src: url('./fonts/Roboto-Regular.ttf');
+        font-weight: normal;
+        font-style: normal;    
+    }
+    
+    @font-face {
+        font-family: 'Roboto';
+        src: url('./fonts/Roboto-Light.ttf');
+        font-weight:300;
+        font-style: normal;    
+    }
+    
+    @font-face {
+        font-family: 'Roboto';
+        src: url('./fonts/Roboto-LightItalic.ttf');
+        font-weight:300;
+        font-style: italic;    
+    }
+    
+    @font-face {
+        font-family: 'Roboto';
+        src: url('./fonts/Roboto-Medium.ttf');
+        font-weight:500;
+        font-style: normal;    
+    }
+    
+    @font-face {
+        font-family: 'Roboto';
+        src: url('./fonts/Roboto-MediumItalic.ttf');
+        font-weight:500;
+        font-style: italic;    
+    }
+    
+    @font-face {
+        font-family: 'Roboto';
+        src: url('./fonts/Roboto-Thin.ttf');
+        font-weight:100;
+        font-style: normal;    
+    }
+    
+    @font-face {
+        font-family: 'Roboto';
+        src: url('./fonts/Roboto-ThinItalic.ttf');
+        font-weight:100;
+        font-style: italic;    
+    }
 }
 
 * {
@@ -111,23 +114,7 @@ table { border-collapse: collapse; border-spacing: 0;}
     --default-normal-font-size: 1.25em;
     --default-card-font-size: 1.125em;
     font-family: 'Roboto', sans-serif;
-}
-
-p {
-    color: #333;
-}
-
-h1, h2 {
-    font-family: 'PlayfairDisplay', serif;
-}
-
-body { 
-    width: 100%;
-    background-color: #333;
-
-    > * {
-        margin-top: var(--default-padding-large);
-    }
+    --default-max-width: 500px;
 }
 
 h1 {
@@ -137,40 +124,54 @@ h1 {
     text-shadow: 0.05em 0.05em 0.025em #00000022;
 }
 
+
+h1, h2 {
+    font-family: 'PlayfairDisplay', serif;
+}
+
+p {
+    color: #333;
+}
+
+body { 
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > * {
+        margin-top: var(--default-padding-large);
+    }
+}
+
 .section {
-    margin: var(--default-padding-large) calc(0.5*var(--default-padding));
+    margin: var(--default-padding-large) 0;
     background-color: #e6e6e6;
     padding: var(--default-padding) var(--default-padding-small);
+    word-wrap: break-word;
 }
 
 figure {
-    background-image: linear-gradient(-20deg, #333 49.75%, rgb(156, 16, 16) 50%, rgb(156, 16, 16) 50.5%, rgb(201, 40, 40));
-    text-align: center;
-    img {
-        border-radius: 40% 0 40% 0;
-        width: 100%;
-        padding: var(--default-padding) var(--default-padding) 0 var(--default-padding);
-    }
-    
-    figcaption{
-        position: absolute;
-        transform: translateY(calc(-100% - 0.75*var(--default-padding)));
-        width: calc(70% - 2*var(--default-padding));
-        margin-left: var(--default-padding);
-        padding: var(--default-padding-small);
-    
-        font-size: calc(1.25*var(--default-large-font-size));
-        font-weight: lighter;
-        text-align: left;
-        color: #dadada;
-        text-shadow: 0.05em 0.05em 0.1em black;
-        background-color: #2225;
-        
-    }    
+    position: relative;
+}
+
+.figcaption{
+    padding: var(--default-padding-small);
+    font-size: calc(1.25*var(--default-large-font-size));
+    font-weight: lighter;
+    text-align: left;
+    color: #dadada;
+    text-shadow: 0.05em 0.05em 0.1em black;
+    background-color: #2225;
+}  
+
+header{
+    padding: 0;
+    margin: 0;
 }
 
 .about{
-    p{
+    p {
         margin-top: var(--default-padding-small);
         font-size: calc(var(--default-normal-font-size)); 
     }
@@ -196,7 +197,14 @@ nav, .links{
 
 .projects {
     background-color: rgb(201, 201, 201);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 
+    h1{
+        width: 100%;
+    }
     .card{
         margin: var(--default-padding) var(--default-padding-small) calc(3*var(--default-padding));
 
@@ -204,8 +212,9 @@ nav, .links{
         border-radius: var(--default-padding);
         box-shadow: calc(0.5*var(--default-padding-small)) calc(0.5*var(--default-padding-small)) calc(0.5*var(--default-padding-small)) #00000077;
         display: grid;
-        grid-template: 1fr auto auto / 1fr auto;
-        align-items: center;
+        grid-template: auto auto 1fr / auto 1fr;
+        align-items: start;
+        justify-items: start;
         padding: 0 0 var(--default-padding-large) 0;
 
         > img{
@@ -225,12 +234,14 @@ nav, .links{
             margin: var(--default-padding-small) var(--default-padding-small) 0 var(--default-padding-small);
             grid-area: 2 / 1 / 2 / 1;
             font-size: var(--default-header2-font-size);
+            text-wrap: nowrap;
         }
 
         .links{
             margin: var(--default-padding-small) var(--default-padding-small) 0 var(--default-padding-small);
             grid-area: 2 / 2 / 2 / 2;
             font-size: calc(0.5*var(--default-header2-font-size));
+            justify-self: end;
         }
 
         p {
@@ -248,6 +259,7 @@ nav, .links{
 }
 
 .contact{
+    background-color: rgb(201, 201, 201);
     .left{
         h1 {
             margin-bottom:var(--default-padding-small);
@@ -281,6 +293,162 @@ nav, .links{
     img {
         margin-top: var(--default-padding-large);
         object-fit: cover;
+        max-width: 100%;
+    }
+}
+
+/* Phone only */
+@media (max-width: 599px){
+    figure {
+        background-image: linear-gradient(-20deg, #333 49.75%, rgb(201, 201, 201) 50%, rgb(201, 201, 201)  50.5%, rgb(150,150,150));
+        text-align: center;
+        img {
+            padding: var(--default-padding) var(--default-padding) 0 var(--default-padding);
+            width: 100%;
+            border-radius: 40% 0 40% 0;
+        }
+    }
+
+    .figcaption{
+        transform: translateY(calc(-100% - 0.75*var(--default-padding)));
+        width: calc(75% - 2*var(--default-padding));
+        margin-left: var(--default-padding);
+    }
+}
+
+/* Phone and tablet shared */
+@media (max-width: 930px){
+    .figcaption{
+        position: absolute;
+    }
+}
+
+
+/* Tablet mode */
+@media (min-width: 600px) and (max-width: 930px){
+    .about-container{
+        figure {
+            margin: 0 var(--default-padding) var(--default-padding) 0;
+            max-width: 60%;
+            float: left;
+            z-index: 2;
+            img {
+                width: 100%;
+                max-height: 500px;
+                padding: var(--default-padding) 0 0 var(--default-padding-small);
+                transform-origin: bottom right;
+                transform: scale(1.05);
+            } 
+        }
+
+        .figcaption{
+            z-index: 3;
+            width: fit-content;
+            top: calc(4*var(--default-padding-large) - 0.5*var(--default-large-font-size) - var(--default-padding));
+            right: calc(2*var(--default-padding));
+        }   
+
+        .about.section{
+            /* Extra margin to account for shifted image */
+            margin-top: calc(2*var(--default-padding-large));
+            min-height:382px;
+        }
+    }
+}
+
+/* Shared between tablet and desktop */
+@media (min-width: 600px){
+    .projects{
+        flex-direction: row;
+        .card{
+            max-width: calc(300px - 6*var(--default-padding-small));
+        }
+    }
+
+    .about-container{
+        background-image: linear-gradient(-20deg, #333 49.75%, rgb(201, 201, 201) 50%, rgb(201, 201, 201)  50.5%, rgb(150,150,150));
+        
+
+        /* Extra padding for bigger windows */
+        padding: calc(2*var(--default-padding-large)) calc(2*var(--default-padding-large)) 0;
+
+        .about.section {
+            position: relative;
+            margin: calc(3*var(--default-padding)) calc(2*var(--default-padding));
+
+        /* Extra padding at bottom for the adjusted nav element */
+        padding-bottom: calc(1.5*var(--default-padding) + 1.25*var(--default-normal-font-size));
+        }
+
+        
+        /* Have the  nav at bottom right so it looks better on larger box sizes */
+        nav{
+            position: absolute;
+            right: var(--default-padding-small);
+            bottom: var(--default-padding);
+        }
+    }
+}
+
+/* Desktop mode */
+@media (min-width: 931px){
+    body{
+        background-color: #333;
+
+        > * {
+            max-width: 1200px;
+        }
+    }
+
+    .about-container{
         width: 100%;
+        display: grid;
+        grid-template: auto auto / auto auto;
+        grid-template-areas: 
+            "a b"
+            "a c";
+        justify-items: center;
+        figure {
+            grid-area: a;
+            justify-self: end;
+
+            img{
+                max-width: 500px;
+            }
+        }
+
+        .figcaption{
+            justify-self: start;
+            align-self: end;
+            grid-area: b;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .about.section {
+            margin: 0;
+            justify-self: start;
+            align-self: start;
+            grid-area: c;
+            max-width: 500px;
+        }
+    }
+
+    .contact{
+        display: grid;
+        grid-template: 1fr / 1fr 1fr;
+        grid-template-areas: "a b";
+        align-items: center;
+
+        .left{
+            grid-area: a;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .right{
+            grid-area: b;
+        }
     }
 }
